@@ -1,22 +1,72 @@
 @font-face {
     font-family: 'InterMedium';
     src: url('../public/assets/fonts/inter/static/Inter_18pt-Medium.ttf') format('truetype');
-    font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'InterBold';
     src: url('../public/assets/fonts/inter/static/Inter_18pt-Bold.ttf') format('truetype');
-    font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'InterRegular';
     src: url('../public/assets/fonts/inter/static/Inter_18pt-Regular.ttf') format('truetype');
-    font-weight: 400;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'InterSemiBold';
+    src: url('../public/assets/fonts/inter/static/Inter_18pt-SemiBold.ttf') format('truetype');
+    font-style: normal;
+}
+
+
+:root {
+    --Neutral-950: #0E121B;
+    --Neutral-900: #191B25;
+    --Neutral-800: #232530;
+    --Neutral-700: #2B303B;
+    --Neutral-600: #525B66;
+    --Neutral-500: #777D84;
+    --Neutral-400: #9AA0AE;
+    --Neutral-300: #CACFDB;
+    --Neutral-200: #E0E4EA;
+    --Neutral-100: #F3F5F8;
+    --Neutral-50: #F5F7FA;
+    --Neutral-0: #FFFFFF;
+
+    --Blue-700: #2527D0;
+    --Blue-500: #335CFF;
+    --Blue-50: #E6F1FF;
+
+    --Green-500: #21BC1B;
+    --Green-100: #D0FEE9;
+
+    --Red-500: #FB3748;
+    --Red-100: #FFD5D8;
+}
+
+.text-preset-1 {
+    font-family: 'InterBold';
+    font-size: 1.5rem;
+    line-height:120%;
+    letter-spacing:-0.013rem;
+}
+
+.text-preset-2 {
+    font-family: 'InterBold';
+    font-size: 1.25rem;
+    line-height:120%;
+    letter-spacing:-0.013rem;
+}
+
+.text-preset-3 {
+    font-family: 'InterSemiBold';
+    font-size: 1rem;
+    line-height:120%;
+    letter-spacing:-0.019rem;
 }
 
 
@@ -25,4 +75,18 @@
     font-size: 0.875rem;
     line-height: 120%;
     letter-spacing: -0.013rem;
+}
+
+.text-preset-5 {
+    font-family: 'InterRegular';
+    font-size: 0.875rem;
+    line-height:120%;
+    letter-spacing:-0.013rem;
+}
+
+.text-preset-6 {
+    font-family: 'InterRegular';
+    font-size: 0.75rem;
+    line-height:120%;
+    letter-spacing:-0.013rem;
 }

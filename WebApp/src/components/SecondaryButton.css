@@ -1,0 +1,27 @@
+.secondary-button {
+    background-color: var(--Neutral-100);
+    color: var(--Neutral-600);
+    border-radius: 8px;
+    border: none;
+    padding: 0.75rem 1rem;
+}
+
+.secondary-button:hover {
+    background-color: var(--Neutral-0);
+    color: var(--Neutral-950);  
+    border: 1px solid var(--Neutral-300)
+}
+
+.secondary-button:focus {
+    background-color: var(--Neutral-0);
+    color: var(--Neutral-950);
+    border: 1px solid var(--Neutral-950);
+    box-shadow: 0 0 0 2px var(--Neutral-0);
+    box-shadow: 0 0 0 4px var(--Neutral-400); 
+}
+
+.secondary-button:disabled {
+    background-color: var(--Netural-50);
+    color: var(--Neutral-300);
+
+}

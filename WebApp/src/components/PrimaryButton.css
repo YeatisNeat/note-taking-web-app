@@ -1,0 +1,22 @@
+
+.primary-button {
+    background-color: var(--Blue-500);
+    color: var(--Neutral-0);
+    border-radius: 8px;
+    border: none;
+    padding: 0.75rem 1rem
+}
+
+.primary-button:hover {
+    background-color: var(--Blue-700);
+}
+
+.primary-button:focus {
+    box-shadow: 0 0 0 2px;
+    box-shadow: 0 0 0 4px var(--Neutral-400);
+}
+
+.primary-button:disabled {
+    background-color: var(--Neutral-100);
+    color: var(--Neutral-300);
+}

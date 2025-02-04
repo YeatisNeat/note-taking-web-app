@@ -1,11 +1,13 @@
 import './App.css'
-import Button from './components/Button'
+import PrimaryButton from './components/PrimaryButton'
+import SecondaryButton from './components/SecondaryButton'
+import BorderButton from './components/BorderButton'
 
 function App() {
 
   return (
     <>
-      <Button className ="text-preset-4"/>
+      <BorderButton textPreset="text-preset-4" text="Border Button" />
     </>
   )
 }
