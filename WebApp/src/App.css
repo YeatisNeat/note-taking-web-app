@@ -48,6 +48,12 @@
     --Red-100: #FFD5D8;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .text-preset-1 {
     font-family: 'InterBold';
     font-size: 1.5rem;
