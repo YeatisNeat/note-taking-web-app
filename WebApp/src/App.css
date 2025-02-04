@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'InterMedium';
+    src: url('../public/assets/fonts/inter/static/Inter_18pt-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'InterBold';
+    src: url('../public/assets/fonts/inter/static/Inter_18pt-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'InterRegular';
+    src: url('../public/assets/fonts/inter/static/Inter_18pt-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.text-preset-4 {
+    font-family: 'InterMedium';
+    font-size: 0.875rem;
+    line-height: 120%;
+    letter-spacing: -0.013rem;
+}
