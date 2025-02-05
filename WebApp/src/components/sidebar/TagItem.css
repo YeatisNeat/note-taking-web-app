@@ -1,0 +1,13 @@
+.tag-item {
+    background-color: var(--Neutral-0);
+    padding: 0.625rem 0.75rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 0.25rem;
+    border-radius: 8px;
+}
+
+.tag-item:focus {
+    background-color: var(--Neutral-100);
+}

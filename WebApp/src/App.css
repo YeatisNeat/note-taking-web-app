@@ -54,6 +54,14 @@
     box-sizing: border-box;
 }
 
+body {
+    height: 100vh;
+}
+
+#root {
+    height: 100%;
+}
+
 .text-preset-1 {
     font-family: 'InterBold';
     font-size: 1.5rem;
