@@ -1,0 +1,9 @@
+.notesbar {
+    height: 100%;
+    padding: 1.25rem 2rem;
+    padding-right: 1rem;
+}
+
+.notesbar-button {
+    margin-bottom: 1rem;
+}

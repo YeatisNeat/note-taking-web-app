@@ -10,3 +10,20 @@
 .tag-container {
     margin-bottom: 0.75rem;
 }
+
+.tags-list{
+    display: flex;
+    gap: 0.25rem;
+    list-style-type: none;
+}
+
+.tag-list-div {
+    background-color: var(--Neutral-200);
+    border-radius: 4px;
+    padding: 0.125rem 0.375rem;
+
+}
+
+.note-item:focus {
+    background-color: var(--Neutral-100);
+}
