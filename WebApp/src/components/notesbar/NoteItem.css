@@ -1,0 +1,12 @@
+.note-item {
+    padding: 0.5rem;
+}
+
+.note-title {
+    color: var(--Neutral-950);
+    margin-bottom: 0.75rem;
+}
+
+.tag-container {
+    margin-bottom: 0.75rem;
+}
