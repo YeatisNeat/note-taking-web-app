@@ -2,9 +2,14 @@ import './NoteItem.css'
 
 function NoteItem (props) {
     const tags = props.tags
+
+    function handleClick() {
+        props.handleCurrentNote(props.note)
+        console.log(props.note)
+    }
     
     return (
-        <div className="note-item">
+        <div className="note-item" onClick={handleClick}>
             <p className="note-title text-preset-3">{props.noteTitle}</p>
             <div className="tag-container">
                 <ul className="tags-list">

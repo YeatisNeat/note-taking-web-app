@@ -2,7 +2,7 @@ import './SecondaryButton.css'
 
 function SecondaryButton (props) {
     return (
-        <button className={`secondary-button ${props.textPreset}`}>{props.text}</button>
+        <button onClick={props.onClick} className={`secondary-button ${props.textPreset}`}>{props.text}</button>
     )
 }
 

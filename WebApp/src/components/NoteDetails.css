@@ -1,0 +1,76 @@
+.note-details {
+    padding: 1.25rem 1.5rem;
+}
+
+.note-details-title {
+    margin-bottom: 1rem;
+}
+
+.note-details-tag-list {
+    display: flex;
+    padding: 0.25rem 0;
+    align-items: center;
+    gap: 4.313rem;
+    margin-bottom: 0.5rem;
+}
+
+.note-details-img {
+    width: 1rem;
+    height: 1rem;
+}
+
+.note-details-tags-ul {
+    display: flex;
+    list-style-type: none;
+    gap: 0.375rem;
+}
+
+.note-details-tag-icon-container {
+    display: flex;
+    gap: 0.375rem;
+}
+
+.note-details-last-edited {
+    display: flex;
+    gap: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.note-details-divider {
+    margin-bottom: 1rem;
+}
+
+.note-details-content {
+    height: 540px;
+    margin-bottom: 1rem;
+}
+
+.note-details-content-text {
+    white-space: pre-wrap;
+  }
+
+.note-details-buttons-container {
+    display: flex;
+    gap: 1rem;
+}
+
+input.note-details-title,
+textarea.note-details-content-text {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.note-details-tags-input {
+    padding: 0.25rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    flex-grow: 1;
+}
+
+textarea.note-details-content-text {
+    height: 540px;
+    resize: vertical;
+}

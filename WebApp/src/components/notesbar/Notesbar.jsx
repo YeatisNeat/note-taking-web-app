@@ -1,3 +1,4 @@
+import {useState} from 'react'
 import './Notesbar.css'
 import PrimaryButton from "../PrimaryButton"
 import NoteItem from "./NoteItem"
@@ -6,8 +7,11 @@ import NoteItem from "./NoteItem"
 
 
 function Notesbar (props) {
-    console.log(props)
-   
+
+   const createNewNote = () => {
+        
+   }
+    
 
     return (
         <div className="notesbar">
@@ -16,7 +20,7 @@ function Notesbar (props) {
                {props.data.map((note, index) => {
                 return (
                     <>
-                    <div className="note-item"><NoteItem noteTitle={note.title} date={note.lastEdited} tags={note.tags}/></div>
+                    <div className="note-item"><NoteItem note={note} noteTitle={note.title} date={note.lastEdited} tags={note.tags} handleCurrentNote={props.setNote}/></div>
                     <hr className="divider" />
                     </>
                 )
