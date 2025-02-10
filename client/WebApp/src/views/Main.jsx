@@ -1,27 +1,30 @@
 import {useState, useEffect} from 'react'
+import axios from "axios"
 import Sidebar from '../components/sidebar/Sidebar.jsx'
 import SidebarRight from '../components/sidebar/SidebarRight.jsx'
 import Notesbar from '../components/notesbar/Notesbar.jsx'
 import NoteDetails from '../components/NoteDetails.jsx'
 
-import data from '../data.json';
+
 
 function Main () {
+    
     const [category, setCategory] = useState('All Notes')
     // const [filteredData, setFilteredData] = useState([])
-    const [filteredData, setFilteredData] = useState(data.notes)
+    const [filteredData, setFilteredData] = useState([])
     const [currentNote, setNote] = useState(null)
 
-    console.log(currentNote)
-
-    useEffect ( ()=>  {
-        
-        const newFIlteredData = data.notes.filter( note => {
-            if (category == 'All Notes') return data.notes
-            return note.tags.includes(category)
-        }) 
-        setFilteredData(newFIlteredData)
-    }, [category])
+useEffect(() => {
+    const fetchData = async () => {
+        try {
+            const response = await axios.get(`http://localhost:8080/api/${category}`)
+            setFilteredData(response.data.notes)
+        } catch(error) {
+            console.error ('Error fetching data:', error)
+        }
+    }
+    fetchData()
+}, [category])
     
     
 

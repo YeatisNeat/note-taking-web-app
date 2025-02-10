@@ -1,14 +1,15 @@
-import { useRef } from 'react';
-import './NoteDetails.css';
-import TagIcon from '../images/icon-tag.svg';
-import ClockIcon from '../images/icon-clock.svg';
-import PrimaryButton from './PrimaryButton';
-import SecondaryButton from './SecondaryButton';
+import { useRef } from 'react'
+import './NoteDetails.css'
+import TagIcon from '../images/icon-tag.svg'
+import ClockIcon from '../images/icon-clock.svg'
+import PrimaryButton from './PrimaryButton'
+import SecondaryButton from './SecondaryButton'
+import axios from 'axios'
 
 function NoteDetails(props) {
-    const titleInputRef = useRef(null);
-    const tagsInputRef = useRef(null);
-    const contentInputRef = useRef(null);
+    const titleInputRef = useRef(null)
+    const tagsInputRef = useRef(null)
+    const contentInputRef = useRef(null)
 
     const handleSave = () => {
         console.log("Clicked")
@@ -17,16 +18,18 @@ function NoteDetails(props) {
             tags: tagsInputRef.current.value.split(',').map(tag => tag.trim()),
             content: contentInputRef.current.value,
             lastEdited: new Date().toLocaleString()
-        };
-        console.log('Saved note data:', noteData);
-    };
+        }
+        console.log(noteData)
+        axios.post("http://localhost:8080/api", noteData)
+
+    }
 
     const handleCancel = () => {
-        // Clear inputs
-        titleInputRef.current.value = '';
-        tagsInputRef.current.value = '';
-        contentInputRef.current.value = '';
-    };
+        
+        titleInputRef.current.value = ''
+        tagsInputRef.current.value = ''
+        contentInputRef.current.value = ''
+    }
 
     if (props.note == null) {
         return (
@@ -76,9 +79,9 @@ function NoteDetails(props) {
                     />
                 </div>
             </div>
-        );
+        )
     } else {
-        // Existing note display remains unchanged
+       
         return (
             <div className="note-details">
                 <h1 className="text-preset-1 note-details-title">{props.note.title}</h1>
@@ -110,8 +113,8 @@ function NoteDetails(props) {
                     <SecondaryButton textPreset='text-preset-4' text='Cancel' />
                 </div>
             </div>
-        );
+        )
     }
 }
 
-export default NoteDetails;
+export default NoteDetails
