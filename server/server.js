@@ -9,7 +9,11 @@ const corsOptions = {
 const data = JSON.parse(fs.readFileSync('./data.json'))
 
 app.use(cors(corsOptions))
-app.use(express.json)
+app.use(express.json())
+
+app.get("/", (req, res) => {
+   res.send("Yeet")
+})
 
 app.get("/api/:category", (req, res) => {
     const category = req.params.category
