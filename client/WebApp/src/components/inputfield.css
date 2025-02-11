@@ -1,0 +1,11 @@
+.input-field {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    width: 100%;
+    height: auto; /* Let the height adjust dynamically */
+    border-radius: 8px;
+    padding: 1rem 0.75rem;
+    background-color: #FFFFFF;
+    opacity: 1;    
+}
+
