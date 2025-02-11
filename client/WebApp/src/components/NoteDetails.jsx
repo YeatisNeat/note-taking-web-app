@@ -11,7 +11,9 @@ function NoteDetails(props) {
     const tagsInputRef = useRef(null)
     const contentInputRef = useRef(null)
 
-    const handleSave = () => {
+    const handleSave = (e) => {
+        const button = e.currentTarget
+        button.disabled = true
         console.log("Clicked")
         const noteData = {
             title: titleInputRef.current.value,
@@ -20,7 +22,13 @@ function NoteDetails(props) {
             lastEdited: new Date().toLocaleString()
         }
         console.log(noteData)
-        axios.post("http://localhost:8080/api", noteData)
+        
+        axios.post("http://localhost:8080/api", noteData).then((resposne) => {
+            console.log("Note Saved", response.data)
+        }).finally(() => {
+            button.disabled = false
+        })
+
 
     }
 

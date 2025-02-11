@@ -11,9 +11,7 @@ const data = JSON.parse(fs.readFileSync('./data.json'))
 app.use(cors(corsOptions))
 app.use(express.json())
 
-app.get("/", (req, res) => {
-   res.send("Yeet")
-})
+
 
 app.get("/api/:category", (req, res) => {
     const category = req.params.category
@@ -25,7 +23,34 @@ app.get("/api/:category", (req, res) => {
 })
 
 app.post("/api", (req, res) => {
-    console.log(req)
+    console.log(req.body)
+    data.notes.push(req.body)
+    console.log(data.notes)
+    const updatedData = JSON.stringify(data, null, 2)
+
+    fs.writeFileSync('./data.json', updatedData)
+    res.status(201)
+})
+
+app.delete("/api", (req, res) => {
+    console.log(req.body)
+    console.log("data:", data.notes[0])
+    const deleteData = data.notes.filter((note) => { 
+        const isExactMatch =
+        note.title === req.body.title &&
+        JSON.stringify(note.tags) === JSON.stringify(req.body.tags) &&
+        note.content === req.body.content;
+
+    
+        return !isExactMatch;
+    })
+    
+    console.log(deleteData)
+
+    const updatedData = JSON.stringify({notes: deleteData}, null, 2)
+
+    fs.writeFileSync('./data.json', updatedData)
+    res.status(201)
 })
 
 app.listen(8080, () => {

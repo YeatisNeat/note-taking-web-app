@@ -1,10 +1,13 @@
 import './Sidebar.css'
 import BorderButton from '../BorderButton'
 import deleteIcon from '../../images/icon-delete.svg'
+import axios from 'axios'
 
 function SidebarRight (props) {
 
-    const handleDelete = () => {
+    const handleDelete = (e) => {
+        const button = e.currentTarget
+        button.disabled = true
         console.log("Clicked")
         const noteData = {
             title: props.note.title,
@@ -13,6 +16,12 @@ function SidebarRight (props) {
             lastEdited: props.note.lastEdited
         }
         console.log('Deleted note data:', noteData)
+
+        axios.delete("http://localhost:8080/api", {data: noteData}).then((resposne) => {
+            console.log("Note Deleted", response.data)
+        }).finally(() => {
+            button.disabled = false
+        })
     }
 
     return (
