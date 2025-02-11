@@ -4,7 +4,8 @@ import Sidebar from '../components/sidebar/Sidebar.jsx'
 import SidebarRight from '../components/sidebar/SidebarRight.jsx'
 import Notesbar from '../components/notesbar/Notesbar.jsx'
 import NoteDetails from '../components/NoteDetails.jsx'
-
+import Toast from '../components/Toast.jsx'
+import './Main.css'
 
 
 function Main () {
@@ -34,13 +35,20 @@ useEffect(() => {
     }
 
     return (
-        <>
-            <Sidebar handleCategory={handleCategory}/>
+            <>
+        <div className="cont">
+        <div className="container">
+            {/* <Sidebar handleCategory={handleCategory}/>
             <Notesbar data={filteredData} setNote={setNote}/>
             <NoteDetails note={currentNote}/>
             <SidebarRight note={currentNote}/>
-        </>
+             */}
+        </div>
+        </div> 
+            
+            <Toast/>
         
+            </>
     )
 }
 
