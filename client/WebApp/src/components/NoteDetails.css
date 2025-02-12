@@ -1,16 +1,25 @@
 .note-details {
-    padding: 1.25rem 1.5rem;
+    padding: 1.5rem;
+    background-color: var(--Neutral-0);
+    border: 1px solid var(--Neutral-200);
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0.5rem;
 }
 
 .note-details-title {
+    font-size: 1.5rem;
+    font-weight: bold;
     margin-bottom: 1rem;
+    color: var(--Neutral-950);
 }
 
 .note-details-tag-list {
     display: flex;
-    padding: 0.25rem 0;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 4.313rem;
+    gap: 1rem;
+    padding: 0.25rem 0;
     margin-bottom: 0.5rem;
 }
 
@@ -23,6 +32,9 @@
     display: flex;
     list-style-type: none;
     gap: 0.375rem;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
 }
 
 .note-details-tag-icon-container {
@@ -32,22 +44,27 @@
 
 .note-details-last-edited {
     display: flex;
+    flex-wrap: wrap;
     gap: 1.75rem;
     margin-bottom: 1rem;
+    font-size: 0.875rem;
+    color: var(--Neutral-500);
 }
 
 .note-details-divider {
     margin-bottom: 1rem;
+    border-top: 1px solid var(--Neutral-200);
 }
 
 .note-details-content {
-    height: 540px;
+    min-height: 300px;
     margin-bottom: 1rem;
 }
 
 .note-details-content-text {
     white-space: pre-wrap;
-  }
+    color: var(--Neutral-700);
+}
 
 .note-details-buttons-container {
     display: flex;
@@ -58,19 +75,27 @@ input.note-details-title,
 textarea.note-details-content-text {
     width: 100%;
     padding: 0.5rem;
-    border: 1px solid #ddd;
+    border: 1px solid var(--Neutral-200);
     border-radius: 4px;
     font-family: inherit;
 }
 
 .note-details-tags-input {
     padding: 0.25rem;
-    border: 1px solid #ddd;
+    border: 1px solid var(--Neutral-200);
     border-radius: 4px;
     flex-grow: 1;
 }
 
 textarea.note-details-content-text {
-    height: 540px;
+    min-height: 300px;
     resize: vertical;
+}
+
+
+@media (max-width: 768px) {
+    .note-details {
+        padding: 1rem;
+        margin: 0.5rem 0;
+    }
 }

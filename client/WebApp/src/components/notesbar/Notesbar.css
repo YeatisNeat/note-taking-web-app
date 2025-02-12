@@ -1,9 +1,18 @@
 .notesbar {
     height: 100%;
-    padding: 1.25rem 2rem;
-    padding-right: 1rem;
+    padding: 1.25rem 2rem 1.25rem 2rem;
+    background-color: var(--Neutral-0);
+    overflow-y: auto;
+    border-right: 1px solid var(--Neutral-200);
 }
 
-.notesbar-button {
-    margin-bottom: 1rem;
+
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .notesbar {
+        padding: 1rem;
+    }
 }
