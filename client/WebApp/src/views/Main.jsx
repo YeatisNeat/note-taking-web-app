@@ -15,7 +15,6 @@ function Main () {
     const [filteredData, setFilteredData] = useState([])
     const [currentNote, setNote] = useState(null)
 
-useEffect(() => {
     const fetchData = async () => {
         try {
             const response = await axios.get(`http://localhost:8080/api/${category}`)
@@ -24,6 +23,9 @@ useEffect(() => {
             console.error ('Error fetching data:', error)
         }
     }
+
+useEffect(() => {
+    
     fetchData()
 }, [category])
     
@@ -35,20 +37,18 @@ useEffect(() => {
     }
 
     return (
-            <>
+            
         <div className="cont">
         <div className="container">
-            {/* <Sidebar handleCategory={handleCategory}/>
+            <Sidebar handleCategory={handleCategory}/>
             <Notesbar data={filteredData} setNote={setNote}/>
-            <NoteDetails note={currentNote}/>
-            <SidebarRight note={currentNote}/>
-             */}
+            <NoteDetails note={currentNote} onRefreash={fetchData}/>
+            <SidebarRight note={currentNote} onRefreash={fetchData}/>
+            
         </div>
         </div> 
             
-            <Toast/>
-        
-            </>
+            
     )
 }
 

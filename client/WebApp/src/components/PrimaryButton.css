@@ -4,11 +4,17 @@
     color: var(--Neutral-0);
     border-radius: 8px;
     border: none;
-    padding: 0.75rem 1rem
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .primary-button:hover {
     background-color: var(--Blue-700);
+}
+
+.primary-button:active {
+    transform: scale(0.98);
 }
 
 .primary-button:focus {
@@ -18,4 +24,5 @@
 .primary-button:disabled {
     background-color: var(--Neutral-100);
     color: var(--Neutral-300);
+    cursor: not-allowed;
 }

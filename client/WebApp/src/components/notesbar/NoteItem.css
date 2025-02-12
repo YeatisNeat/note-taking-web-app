@@ -1,5 +1,11 @@
 .note-item {
     padding: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.note-item:hover {
+    background-color: var(--Neutral-50);
 }
 
 .note-title {
@@ -26,4 +32,6 @@
 
 .note-item:focus {
     background-color: var(--Neutral-100);
+    outline: none;
+    box-shadow: 0 0 0 2px var(--Neutral-200);
 }

@@ -4,12 +4,18 @@
     border-radius: 8px;
     border: none;
     padding: 0.75rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .secondary-button:hover {
     background-color: var(--Neutral-0);
     color: var(--Neutral-950);  
     border: 1px solid var(--Neutral-300)
+}
+
+.secondary-button:active {
+    transform: scale(0.98);
 }
 
 .secondary-button:focus {
@@ -20,7 +26,7 @@
 }
 
 .secondary-button:disabled {
-    background-color: var(--Netural-50);
+    background-color: var(--Neutral-50);
     color: var(--Neutral-300);
-
+    cursor: not-allowed;
 }

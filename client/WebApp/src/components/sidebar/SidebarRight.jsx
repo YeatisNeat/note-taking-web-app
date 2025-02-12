@@ -21,6 +21,7 @@ function SidebarRight (props) {
             console.log("Note Deleted", response.data)
         }).finally(() => {
             button.disabled = false
+            props.onRefreash()
         })
     }
 

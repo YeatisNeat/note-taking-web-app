@@ -27,6 +27,7 @@ function NoteDetails(props) {
             console.log("Note Saved", response.data)
         }).finally(() => {
             button.disabled = false
+            props.onRefreash()
         })
 
 
