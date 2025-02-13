@@ -10,6 +10,9 @@ function NoteDetails(props) {
     const titleInputRef = useRef(null)
     const tagsInputRef = useRef(null)
     const contentInputRef = useRef(null)
+    
+    
+    
 
     const handleSave = (e) => {
         const button = e.currentTarget
